@@ -1,15 +1,15 @@
 :root {
-    --color-bg: #282828;
-    --color-fg: #EADBB2;
-    --color-link: #8F9191;
-    --color-link-visited: #668F8B;
-    --color-link-hover: #FA7921 ;
+    --color-bg: #7c7f93;
+    --color-fg: #1e1e2e;
+    --color-link: #1e1e2e;
+    --color-link-visited: #1e1e2e;
+    --color-link-hover: #8aadf4;
 }
 
 html, body {
   background: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Fira Code";
+  font-family: "Berkeley Mono";
   height: 100%;
   width: 100%;
   margin: 0;
@@ -18,43 +18,25 @@ html, body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 460px 600px 1fr;
-  grid-template-areas:
-    ". left right .";
-  column-gap: 80px;
+  grid-template-rows: 0.4fr 1fr;
   justify-items: center;
-  align-items: center;
+  align-items: top;
   min-height: 100%;
-}
-
-.left-container {
-  grid-area: left;
-  aspect-ratio: 1/1;
-}
-
-.right-container {
-  grid-area: right;
-  height: 50%;
-  width: 100%;
-}
-
-.gif img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .head {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 40px;
-  padding-top: 60px;
+  font-size: 64px;
+  font-weight: bold;
+  padding-top: 64px;
 }
 
 .category {
   display: flex;
   flex-direction: column;
-  width: 180px;
+  width: 256px;
 }
 
 .bookmarks {
@@ -66,18 +48,19 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .title {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 li {
   font-size: 16px;
   list-style-type: none;
-  padding: 5px
+  padding: 4px
 }
 
 a:link {
@@ -91,23 +74,4 @@ a:visited {
 
 a:hover {
   color: var(--color-link-hover);
-}
-
-.blinking {
-  animation: opacity 1s ease-in-out infinite;
-  opacity: 1;
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
